@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux"
-import { fetchData } from "../../state/features/data/dataSlice";
+import { getDataWords, fetchData } from "../../state/features/data/dataSlice";
 import { useEffect } from "react"
 
 export default function Dashboard() {
@@ -7,7 +7,7 @@ export default function Dashboard() {
     const dispatch = useDispatch();
 
     // No need for the initial data state (useState) anymore
-    const data = useSelector((state) => state.data?.data || null);
+    const data = useSelector(getDataWords);
     const isLoading = useSelector((state) => state.data?.isLoading || null);
     const error = useSelector((state) => state.data?.error || null);
 
