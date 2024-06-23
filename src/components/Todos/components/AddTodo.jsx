@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { addTodo, removeTodo } from "../../../state/features/todo/todoSlice"
+import { addTodo } from "../../../state/features/todo/todoSlice"
 
 
 export default function AddTodo() {
@@ -21,7 +21,7 @@ export default function AddTodo() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="space-x-3-mt-12">
+      <form onSubmit={handleSubmit} className="addTodoComponent space-x-3-mt-12">
         <input 
           type="text"
           className="
