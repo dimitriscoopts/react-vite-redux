@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
-import { getDataWords, fetchData } from "../../state/features/data/dataSlice";
+import { fetchData } from "../../state/features/data/dataSlice";
+import { getDataWords } from "../../state/features/data/selectors/wordSelector";
 import { useEffect } from "react"
 
 export default function Dashboard() {
